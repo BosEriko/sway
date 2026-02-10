@@ -1,5 +1,5 @@
 1. Make sure Sway is on your [Home Manager (Nix)](https://github.com/BosEriko/nix/blob/master/home.nix) then run `home-manager switch`.
-1. Create entry point for sway on `.config/sway/entry.sh`:
+2. Create entry point for sway on `.config/sway/entry.sh`:
 ```sh
 #!/bin/sh
 # Stop Steam from injecting the performance overlay, as this breaks Sway
@@ -11,18 +11,11 @@ source /home/deck/.nix-profile/etc/profile.d/nix.sh
 # Since Sway is installed via Nix we need to run it with nixGL to get OpenGL working
 exec nixGL sway
 ```
-1. Make entry point executable:
+3. Make entry point executable:
 ```sh
 chmod +x ~/.config/sway/entry.sh
 ```
-1. Append to `~/.bashrc` and make sure `xmodmap` is installed:
-```sh
-xmodmap -e "remove mod1 = Alt_R"
-xmodmap -e "remove mod4 = Super_L"
-xmodmap -e "remove mod4 = Super_R"
-xmodmap -e "add mod4 = Alt_R"
-```
-1. Create Sway Config on `~/.config/sway/config`:
+4. Create Sway Config on `~/.config/sway/config`:
 ```sh
 # Set the output resolution
 output * resolution 1920x1080
@@ -66,7 +59,7 @@ bindsym Mod1+0 workspace $ws10
 # Start Waybar automatically
 exec --no-startup-id /home/deck/.nix-profile/bin/waybar
 ```
-1. Create a Waybar Config on `~/.config/waybar/config`:
+5. Create a Waybar Config on `~/.config/waybar/config`:
 ```sh
 "modules-left": [
   "sway/workspaces"
@@ -81,4 +74,4 @@ exec --no-startup-id /home/deck/.nix-profile/bin/waybar
   "min-width": 1
 }
 ```
-1. Add the entry point to steam as a Non-steam Game
+6. Add the entry point to steam as a Non-steam Game
