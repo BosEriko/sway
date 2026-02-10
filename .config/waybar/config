@@ -1,0 +1,15 @@
+{
+  "modules-left": [
+    "sway/workspaces"
+  ],
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{icon}{name}",
+    "format-icons": {
+      "default": "-",
+      "urgent": "!",
+      "focused": "*"
+    }
+  }
+}
