@@ -1,8 +1,15 @@
 # Configuration
 output * resolution 1920x1080
 output * background /home/deck/Pictures/Wallpaper/Default.png fill
-gaps inner 10
-gaps outer 10
+
+# Border
+gaps inner 5
+gaps outer 5
+for_window [class=".*"] border pixel 3
+client.focused          #4C7899 #285577 #FFFFFF #2E9EF4
+client.focused_inactive #333333 #222222 #888888 #292D2E
+client.unfocused        #333333 #222222 #888888 #292D2E
+client.urgent           #2F343A #900000 #FFFFFF #900000
 
 # Focus windows
 bindsym Mod1+h focus left
