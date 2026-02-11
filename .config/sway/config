@@ -42,7 +42,11 @@ bindsym Mod4+2 workspace 2; exec foot
 
 # Resize Windows
 # Layout Orientation
+
 # Window Controls
+bindsym Mod1+Space floating enable
+bindsym Shift+Mod1+Space floating disable
+bindsym Shift+Mod1+q kill
 
 # Reload Config
 bindsym Shift+Mod1+r reload
