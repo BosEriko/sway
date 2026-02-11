@@ -41,6 +41,7 @@ bindsym Shift+Mod1+9 move container to workspace 9; workspace 9
 bindsym Shift+Mod1+0 move container to workspace 10; workspace 10
 
 # Applications
+bindsym Mod4+1 workspace 1; exec brave
 bindsym Mod4+2 workspace 2; exec foot
 
 # Resize Windows
