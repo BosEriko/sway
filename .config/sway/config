@@ -47,8 +47,8 @@ bindsym Mod1+i resize down 20px
 bindsym Mod1+o resize up 20px
 
 # Layout Orientation
-bindsym Mod1+- move right
-bindsym Mod1+\ move down
+bindsym Mod1+minus move right
+bindsym Mod1+backslash move down
 
 # Window Controls
 bindsym Mod1+Space floating enable
