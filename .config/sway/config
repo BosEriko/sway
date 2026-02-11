@@ -1,8 +1,8 @@
-# Set the output resolution
+# Configuration
 output * resolution 1920x1080
-
-# Set Wallpaper
 output * background /home/deck/Pictures/Wallpaper/Default.png fill
+gaps inner 10
+gaps outer 10
 
 # Focus windows
 bindsym Mod1+h focus left
