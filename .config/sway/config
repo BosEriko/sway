@@ -69,5 +69,8 @@ bindsym Shift+Mod1+q kill
 # Reload Config
 bindsym Shift+Mod1+r reload
 
+# Start kmonad automatically
+exec --no-startup-id /home/deck/.nix-profile/bin/kmonad /home/deck/.config/kmonad/keymap.kbd
+
 # Start Waybar automatically
 exec --no-startup-id /home/deck/.nix-profile/bin/waybar
