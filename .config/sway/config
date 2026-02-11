@@ -13,7 +13,7 @@ bindsym Shift+Mod1+j swap down
 bindsym Shift+Mod1+k swap up
 bindsym Shift+Mod1+l swap right
 
-# Focus workspace (space)
+# Focus workspace
 bindsym Mod1+1 workspace 1
 bindsym Mod1+2 workspace 2
 bindsym Mod1+3 workspace 3
