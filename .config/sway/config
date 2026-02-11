@@ -11,11 +11,6 @@ client.focused_inactive #333333 #222222 #888888 #292D2E
 client.unfocused        #333333 #222222 #888888 #292D2E
 client.urgent           #2F343A #900000 #FFFFFF #900000
 
-# Remap Capslock
-input * {
-    xkb_options "ctrl:nocaps"
-}
-
 # Focus windows
 bindsym Mod1+h focus left
 bindsym Mod1+j focus down
