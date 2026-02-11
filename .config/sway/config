@@ -40,5 +40,12 @@ bindsym Shift+Mod1+0 move container to workspace 10; workspace 10
 # Applications
 bindsym Mod4+2 workspace 2; exec foot
 
+# Resize Windows
+# Layout Orientation
+# Window Controls
+
+# Reload Config
+bindsym Shift+Mod1+r reload
+
 # Start Waybar automatically
 exec --no-startup-id /home/deck/.nix-profile/bin/waybar
