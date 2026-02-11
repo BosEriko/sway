@@ -41,7 +41,14 @@ bindsym Shift+Mod1+0 move container to workspace 10; workspace 10
 bindsym Mod4+2 workspace 2; exec foot
 
 # Resize Windows
+bindsym Mod1+u resize left 20px
+bindsym Mod1+p resize right 20px
+bindsym Mod1+i resize down 20px
+bindsym Mod1+o resize up 20px
+
 # Layout Orientation
+bindsym Mod1+- move right
+bindsym Mod1+\ move down
 
 # Window Controls
 bindsym Mod1+Space floating enable
