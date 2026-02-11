@@ -11,6 +11,11 @@ client.focused_inactive #333333 #222222 #888888 #292D2E
 client.unfocused        #333333 #222222 #888888 #292D2E
 client.urgent           #2F343A #900000 #FFFFFF #900000
 
+# Remap Capslock
+input * {
+    xkb_options "ctrl:nocaps"
+}
+
 # Focus windows
 bindsym Mod1+h focus left
 bindsym Mod1+j focus down
@@ -18,10 +23,10 @@ bindsym Mod1+k focus up
 bindsym Mod1+l focus right
 
 # Move windows
-bindsym Shift+Mod1+h swap left
-bindsym Shift+Mod1+j swap down
-bindsym Shift+Mod1+k swap up
-bindsym Shift+Mod1+l swap right
+bindsym Shift+Mod1+h mark swap, focus left, swap container with mark swap
+bindsym Shift+Mod1+j mark swap, focus down, swap container with mark swap
+bindsym Shift+Mod1+k mark swap, focus up, swap container with mark swap
+bindsym Shift+Mod1+l mark swap, focus right, swap container with mark swap
 
 # Focus workspace
 bindsym Mod1+1 workspace 1
@@ -52,10 +57,10 @@ bindsym Mod4+1 workspace 1; exec brave
 bindsym Mod4+2 workspace 2; exec foot
 
 # Resize Windows
-bindsym Mod1+u resize left 20px
-bindsym Mod1+p resize right 20px
-bindsym Mod1+i resize down 20px
-bindsym Mod1+o resize up 20px
+bindsym Mod1+u resize shrink width 20px
+bindsym Mod1+p resize grow width 20px
+bindsym Mod1+i resize grow height 20px
+bindsym Mod1+o resize shrink height 20px
 
 # Layout Orientation
 bindsym Mod1+minus move right
