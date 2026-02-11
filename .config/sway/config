@@ -8,10 +8,10 @@ bindsym Mod1+k focus up
 bindsym Mod1+l focus right
 
 # Move windows
-# bindsym Shift+Mod1+h swap left
-# bindsym Shift+Mod1+j swap down
-# bindsym Shift+Mod1+k swap up
-# bindsym Shift+Mod1+l swap right
+bindsym Shift+Mod1+h swap left
+bindsym Shift+Mod1+j swap down
+bindsym Shift+Mod1+k swap up
+bindsym Shift+Mod1+l swap right
 
 # Focus workspace (space)
 bindsym Mod1+1 workspace 1
