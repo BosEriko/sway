@@ -3,6 +3,10 @@
     "sway/workspaces"
   ],
 
+  "modules-right": [
+    "clock"
+  ],
+
   "sway/workspaces": {
     "disable-scroll": true,
     "format": "{icon}{name}",
@@ -11,5 +15,11 @@
       "urgent": "!",
       "focused": "*"
     }
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "interval": 60
   }
 }
