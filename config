@@ -1,6 +1,6 @@
 # Configuration
 output * resolution 1920x1080
-output * background /home/deck/Pictures/Wallpaper/Default.png fill
+output * background /home/deck/.config/sway/wallpaper.png fill
 
 # Border
 gaps inner 5
