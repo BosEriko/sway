@@ -23,7 +23,9 @@ nix-env -iA nixgl.auto.nixGLDefault
 
 ## Symlink Waybar Config
 ```sh
-mkdir -p ~/.config/waybar && ln -s ~/.config/sway/waybar ~/.config/waybar/config
+mkdir -p ~/.config/waybar
+ln -s ~/.config/sway/waybar.config ~/.config/waybar/config
+ln -s ~/.config/sway/waybar.css ~/.config/waybar/style.css
 ```
 
 ## Add as a Non-steam Game
