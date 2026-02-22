@@ -1,18 +1,16 @@
 * {
+    font-family: "JetBrainsMono Nerd Font Mono";
     border: none;
     border-radius: 0;
-    font-family: JetBrains Mono;
     font-size: 14px;
     min-height: 0;
-    margin: 0 0px;
+    margin: 0;
 }
 
 window#waybar {
-    background-color: #3c3836;
     border-bottom: none;
     color: #ebdbb2;
-    transition-property: background-color;
-    transition-duration: 0.5s;
+    background-color: transparent;
 }
 
 window#waybar.hidden {
@@ -20,24 +18,20 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    padding: 0 5px;
-    color: #ebdbb2;
-    border-radius: 5px;
+  margin: 10px 0 0 10px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #BCBCBC;
+  background-color: #1e1e2e;
+  color: #fff;
+  box-shadow: none;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: inherit;
-    border-bottom: none;
-    border-radius: 5px;
-}
-
+#workspaces button:hover,
 #workspaces button.focused {
-    background-color: #ebdbb2;
-    color: #282828;
-    border-bottom: none;
-    border-radius: 5px;
+    border-color: #FFDF20;
 }
 
 #workspaces button.urgent {
@@ -51,20 +45,23 @@ window#waybar.hidden {
 
 #clock,
 #battery,
-#backlight,
 #network,
-#pulseaudio,
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 14px;
-    margin: 0 0px;
-    color: #ffffff;
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+  border-radius: 100px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #BCBCBC;
+  background-color: #1e1e2e;
+  color: #fff;
+  box-shadow: none;
 }
 
 #clock {
-    color: #000000;
-    background-color: #ebdbb2;
+    border-color: #FFDF20;
 }
 
 #battery {
@@ -98,43 +95,3 @@ label:focus {
     background-color: #000000;
 }
 
-#backlight {
-    background-color: #ebdbb2;
-    color: #000000;
-}
-
-#network {
-    background-color: #ebdbb2;
-    color: #000000;
-}
-
-#network.disconnected {
-    background-color: #ebdbb2;
-}
-
-#pulseaudio {
-    background-color: #ebdbb2;
-    color: #000000;
-    border-radius: 5px 0px 0px 5px;
-}
-
-#pulseaudio.muted {
-    background-color: #ebdbb2;
-    color: #000000;
-}
-
-#idle_inhibitor {
-    background-color: rgba(0, 0, 0, 0);
-    color: #ebdbb2;
-    border-radius: 5px;
-    margin-right: 2px;
-    margin-left: 3px;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ebdbb2;
-    color: #282828;
-    border-radius: 5px;
-    margin-right: 2px;
-    margin-left: 5px;
-}
