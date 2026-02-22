@@ -73,6 +73,9 @@ bindsym Shift+Mod1+q kill
 # Reload Config
 bindsym Shift+Mod1+r reload
 
+# Rofi
+bindsym control+Mod1+space exec rofi -show drun -theme default
+
 # Start kmonad automatically
 exec --no-startup-id /home/deck/.config/kmonad/setup.sh
 
