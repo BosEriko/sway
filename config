@@ -1,6 +1,6 @@
 # Configuration
 output * resolution 1920x1080
-output * background /home/deck/.config/sway/wallpaper/0003.jpeg fill
+output * background /home/deck/.config/sway/wallpaper/0001.png fill
 
 # Border
 gaps inner 5
@@ -78,6 +78,9 @@ bindsym Shift+Mod1+q kill
 
 # Reload Config
 bindsym Shift+Mod1+r reload
+
+# Cycle Wallpaper
+bindsym Shift+Mod1+w exec ~/.config/sway/cycle-wallpaper.sh
 
 # Rofi
 bindsym control+Mod1+space exec rofi -show drun -theme default
