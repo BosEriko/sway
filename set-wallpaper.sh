@@ -5,7 +5,7 @@ STATE_FILE="$HOME/.config/sway/.wallpaper_index"
 DEFAULT_WALLPAPER="${FILES[0]}"
 
 # Get sorted list of wallpapers
-mapfile -t FILES < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | sort)
+mapfile -t FILES < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f | sort)
 
 # If no wallpapers exist, exit
 if [ ${#FILES[@]} -eq 0 ]; then

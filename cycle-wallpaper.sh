@@ -4,7 +4,7 @@ WALLPAPER_DIR="$HOME/.config/sway/wallpaper"
 STATE_FILE="$HOME/.config/sway/.wallpaper_index"
 
 # Get list of images safely
-mapfile -t FILES < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | sort)
+mapfile -t FILES < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f | sort)
 
 # Exit if no wallpapers found
 if [ ${#FILES[@]} -eq 0 ]; then
