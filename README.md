@@ -3,7 +3,7 @@ Download [Nix](https://github.com/BosEriko/nix) as your package manager then ins
 
 ## Install Sway
 ```sh
-nix-env -iA nixpkgs.sway nixpkgs.waybar nixpkgs.nerd-fonts.jetbrains-mono
+nix-env -iA nixpkgs.swayfx nixpkgs.waybar nixpkgs.nerd-fonts.jetbrains-mono
 ```
 
 ## Install nixGL
