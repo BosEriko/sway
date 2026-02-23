@@ -1,17 +1,9 @@
 # Sway (Window Manager)
-Download [Nix](https://github.com/BosEriko/nix) as your package manager then install [Sway](https://search.nixos.org/packages?channel=25.11&query=sway&show=sway).
+Download [Nix](https://github.com/BosEriko/nix) as your package manager then install [Sway](https://search.nixos.org/packages?query=sway&show=sway).
 
 ## Install Sway
 ```sh
-home.packages = with pkgs; [
-  sway
-  waybar
-];
-```
-
-## Clone the Repository
-```sh
-git clone https://github.com/BosEriko/sway.git ~/.config/sway
+nix-env -iA nixpkgs.sway nixpkgs.waybar nixpkgs.nerd-fonts.jetbrains-mono
 ```
 
 ## Install nixGL
@@ -19,6 +11,11 @@ git clone https://github.com/BosEriko/sway.git ~/.config/sway
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl
 nix-channel --update
 nix-env -iA nixgl.auto.nixGLDefault
+```
+
+## Clone the Repository
+```sh
+git clone https://github.com/BosEriko/sway.git ~/.config/sway
 ```
 
 ## Symlink Waybar Config
