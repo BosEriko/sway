@@ -3,14 +3,8 @@ Download [Nix](https://github.com/BosEriko/nix) as your package manager then ins
 
 ## Install Sway
 ```sh
-nix-env -iA nixpkgs.swayfx nixpkgs.waybar nixpkgs.nerd-fonts.jetbrains-mono
-```
-
-## Install nixGL
-```sh
-nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl
-nix-channel --update
-nix-env -iA nixgl.auto.nixGLDefault
+nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
+nix-env -iA nixpkgs.swayfx nixpkgs.waybar nixpkgs.nerd-fonts.jetbrains-mono nixgl.auto.nixGLDefault
 ```
 
 ## Clone the Repository
