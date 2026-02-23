@@ -3,8 +3,13 @@
 WALLPAPER_DIR="$HOME/.config/sway/wallpaper"
 STATE_FILE="$HOME/.config/sway/.wallpaper_index"
 
-# Get list of images
-mapfile -t FILES < <(ls "$WALLPAPER_DIR"/*.{png,jpg,jpeg} 2>/dev/null | sort)
+# Get list of images safely
+mapfile -t FILES < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) | sort)
+
+# Exit if no wallpapers found
+if [ ${#FILES[@]} -eq 0 ]; then
+  exit 1
+fi
 
 # If no state file, start at 0
 if [ ! -f "$STATE_FILE" ]; then
@@ -12,7 +17,22 @@ if [ ! -f "$STATE_FILE" ]; then
 fi
 
 INDEX=$(cat "$STATE_FILE")
-NEXT_INDEX=$(((INDEX + 1) % ${#FILES[@]}))
+
+# Ensure index is valid
+if ! [[ "$INDEX" =~ ^[0-9]+$ ]]; then
+  INDEX=0
+fi
+
+# Determine direction
+case "$1" in
+prev)
+  NEXT_INDEX=$(((INDEX - 1 + ${#FILES[@]}) % ${#FILES[@]}))
+  ;;
+*)
+  # Default to next
+  NEXT_INDEX=$(((INDEX + 1) % ${#FILES[@]}))
+  ;;
+esac
 
 # Set wallpaper
 swaymsg output '*' background "${FILES[$NEXT_INDEX]}" fill
