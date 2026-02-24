@@ -58,6 +58,7 @@ bindsym Shift+Mod1+0 move container to workspace 10; workspace 10
 # Applications
 bindsym Mod4+1 workspace 1; exec brave
 bindsym Mod4+2 workspace 2; exec foot
+bindsym Mod4+5 workspace 5; exec obsidian
 bindsym Mod4+9 workspace 9; exec spotify
 bindsym Mod4+0 workspace 10; exec discord
 
