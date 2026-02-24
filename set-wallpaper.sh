@@ -2,10 +2,10 @@
 
 WALLPAPER_DIR="$HOME/.config/sway/wallpaper"
 STATE_FILE="$HOME/.config/sway/.wallpaper_index"
-DEFAULT_WALLPAPER="${FILES[0]}"
 
 # Get sorted list of wallpapers
 mapfile -t FILES < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f | sort)
+DEFAULT_WALLPAPER="${FILES[0]}"
 
 # If no wallpapers exist, exit
 if [ ${#FILES[@]} -eq 0 ]; then
